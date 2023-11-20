@@ -8,7 +8,11 @@ def exp(n):
     return( (1+n/largeLim)**largeLim)
 
 def ln(n):
-    a = (int(n).bit_length()-1 )* ln2 -1
+    if n <= 0:
+        if n == 0: raise(Exception("ln(0) is undefined"))
+        else: raise(Exception("ln(x), x<0 is undefined"))
+
+    a = (int(n).bit_length()-1 )* ln2 
     b = a+1
 
     for _ in range(iterLim):
