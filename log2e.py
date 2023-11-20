@@ -17,6 +17,8 @@ def log2a(n : int):
     return( float(l - 1) + r)
 
 def ln(n):
+    if n <= 0:
+        if n == 0: raise(Exception("ln(0) is undefined"))
+        else: raise(Exception("ln(x), x<0 is undefined"))
+        
     return(log2a(n) * ln2)
-
-print(ln(12))
