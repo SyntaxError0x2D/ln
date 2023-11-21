@@ -29,5 +29,5 @@ def ln(n):
         else: raise(Exception("ln(x), x<0 is undefined"))
     
     for _ in range(lnLim): n = sqrt(n)
-    d = 1/2**lnLim
-    return((n-1)/d)
+    
+    return((n-1) * 2**lnLim)
