@@ -30,4 +30,4 @@ def ln(n):
     
     for _ in range(lnLim): n = sqrt(n)
     
-    return((n-1) * 2**lnLim)
+    return((n-1) * (1<<lnLim))
